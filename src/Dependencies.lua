@@ -9,7 +9,11 @@ require 'src/Util'
 require 'src/states/BaseState'
 
 require 'src/Animation'
-
+require 'src/Entity'
+require 'src/Tile'
+require 'src/TileMap'
+require 'src/Snail'
+require 'src/Player'
 
 gSounds = {
     ['jump'] = love.audio.newSource('sounds/jump.wav', 'static'),
