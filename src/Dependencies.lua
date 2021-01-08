@@ -7,6 +7,8 @@ require 'src/StateMachine'
 require 'src/Util'
 
 require 'src/states/BaseState'
+require 'src/states/game/StartState'
+require 'src/states/game/PlayState'
 
 require 'src/Animation'
 require 'src/Entity'
