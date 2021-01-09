@@ -12,7 +12,7 @@ require 'src/states/game/PlayState'
 
 require 'src/states/entity/player/PlayerIdleState'
 require 'src/states/entity/player/PlayerWalkingState'
-require 'src/states/entity/player/PlayerJumpingState'
+require 'src/states/entity/player/PlayerJumpState'
 require 'src/states/entity/player/PlayerFallingState'
 
 require 'src/states/entity/snail/SnailIdleState'
