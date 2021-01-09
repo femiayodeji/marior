@@ -9,6 +9,12 @@ require 'src/Util'
 require 'src/states/BaseState'
 require 'src/states/game/StartState'
 require 'src/states/game/PlayState'
+
+require 'src/states/entity/player/PlayerIdleState'
+require 'src/states/entity/player/PlayerWalkingState'
+require 'src/states/entity/player/PlayerJumpingState'
+require 'src/states/entity/player/PlayerFallingState'
+
 require 'src/states/entity/snail/SnailIdleState'
 require 'src/states/entity/snail/SnailMovingState'
 require 'src/states/entity/snail/SnailChasingState'
@@ -31,7 +37,7 @@ gSounds = {
     ['pickup'] = love.audio.newSource('sounds/pickup.wav', 'static'),
     ['empty-block'] = love.audio.newSource('sounds/empty-block.wav', 'static'),
     ['kill'] = love.audio.newSource('sounds/kill.wav', 'static'),
-    ['kill2'] = love.audio.newSource('sounds/kill2.wav', 'static')
+    ['kill2'] = love.audio.newSource('sounds/kill2.wav', 'static'),
 }
 
 gTextures = {
@@ -42,7 +48,7 @@ gTextures = {
     ['gems'] = love.graphics.newImage('graphics/gems.png'),
     ['backgrounds'] = love.graphics.newImage('graphics/backgrounds.png'),
     ['green-alien'] = love.graphics.newImage('graphics/green_alien.png'),
-    ['creatures'] = love.graphics.newImage('graphics/creatures.png')
+    ['creatures'] = love.graphics.newImage('graphics/creatures.png'),
 }
 
 gFrames = {
