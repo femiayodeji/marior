@@ -33,7 +33,7 @@ function LevelMaker.generate(width, height)
                 )
             end
         else
-            tileId = TILE_ID_GROUND
+            tileID = TILE_ID_GROUND
 
             local blockHeight = 4
 

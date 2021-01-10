@@ -113,7 +113,7 @@ function PlayState:spawnEnemies()
                         snail:changeState('idle', {
                             wait = math.random(5)
                         })
-                        table.insert(self.leve.entities, snail)
+                        table.insert(self.level.entities, snail)
                     end
                 end
             end
