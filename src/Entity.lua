@@ -2,7 +2,7 @@ Entity = Class{}
 
 function Entity:init(def)
     self.x = def.x
-    self.y = death.y
+    self.y = def.y
 
     self.dx = 0
     self.dy = 0
@@ -10,7 +10,7 @@ function Entity:init(def)
     self.width = def.width
     self.height = def.width 
 
-    self.texture = def.width
+    self.texture = def.texture
     self.stateMachine = def.stateMachine
 
     self.direction = 'left'

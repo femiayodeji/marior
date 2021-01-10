@@ -1,6 +1,6 @@
 Tile = Class{}
 
-function Tile:init(x, y, id, topper, tilesets, topperset)
+function Tile:init(x, y, id, topper, tileset, topperset)
     self.x = x
     self.y = y
 

@@ -30,16 +30,16 @@ function PlayState:init()
 end
 
 function PlayState:update(dt)
-    Timer:update(dt)
+    Timer.update(dt)
     
-    self.level.clear()
+    self.level:clear()
 
     self.player:update(dt)
     self.level:update(dt)
-    self.updateCamera()
+    self:updateCamera()
 
     if self.player.x <= 0 then
-        self.palyer.x = 0
+        self.player.x = 0
     elseif self.player.x > TILE_SIZE * self.tileMap.width - self.player.width then 
         self.player.x = TILE_SIZE * self.tileMap.width - self.player.width
     end

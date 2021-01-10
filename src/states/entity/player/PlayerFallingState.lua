@@ -16,7 +16,7 @@ function PlayerFallingState:update(dt)
     self.player.y = self.player.y + (self.player.dy * dt)
 
     local tileBottomLeft = self.player.map:pointToTile(self.player.x + 1, self.player.y + self.player.height)
-    local tileBottomRight = self.player.map:pointToTile(self.player.x + self.width - 1, self.player.y + self.player.height)
+    local tileBottomRight = self.player.map:pointToTile(self.player.x + self.player.width - 1, self.player.y + self.player.height)
 
     if (tileBottomLeft and tileBottomRight) and (tileBottomLeft:collidable() or tileBottomRight:collidable()) then
         self.player.dy = 0
