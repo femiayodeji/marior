@@ -93,14 +93,14 @@ function LevelMaker.generate(width, height)
                         frame = math.random(#JUMP_BLOCKS), 
                         collidable = true,
                         hit = false, 
-                        solid = false, 
+                        solid = true, 
                         onCollide = function(obj) 
                             if not obj.hit then 
                                 if math.random(5) == 1 then 
                                     local gem = GameObject{
                                         texture = 'gems', 
                                         x = (x - 1) * TILE_SIZE, 
-                                        y = (blockHeight - 1) * TILE_SIZE - 1,
+                                        y = (blockHeight - 1) * TILE_SIZE - 4,
                                         width = 16, 
                                         height = 16, 
                                         frame = math.random(#GEMS), 
