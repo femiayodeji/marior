@@ -107,9 +107,9 @@ function LevelMaker.generate(width, height)
                                         collidable = true, 
                                         consumable = true, 
                                         solid = false,
-                                        onConsume = function(Player, object) 
+                                        onConsume = function(player, object) 
                                             gSounds['pickup']:play()
-                                            Player.score = player.score + 100
+                                            player.score = player.score + 100
                                         end
                                     }
 
