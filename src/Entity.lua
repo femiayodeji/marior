@@ -8,7 +8,7 @@ function Entity:init(def)
     self.dy = 0
 
     self.width = def.width
-    self.height = def.width 
+    self.height = def.height 
 
     self.texture = def.texture
     self.stateMachine = def.stateMachine
