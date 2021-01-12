@@ -37,6 +37,19 @@ function SnailMovingState:update(dt)
 
         if (tileLeft and tileBottomLeft) and (tileLeft:collidable() or not tileBottomLeft:collidable()) then 
             self.snail.x = self.snail.x - SNAIL_MOVE_SPEED * dt 
+            self.movingDirection = 'right'
+            self.snail.direction = self.movingDirection
+            self.movingDuration = math.random(5)
+            self.movingTimer = 0
+        end
+    else
+        self.snail.direction = 'right'
+        self.snail.x = self.snail.x + SNAIL_MOVE_SPEED * dt 
+        local tileRight = self.tilemap:pointToTile(self.snail.x + self.snail.width, self.snail.y)
+        local tileBottomRight = self.tilemap:pointToTile(self.snail.x + self.snail.width, self.snail.y + self.snail.height)
+
+        if (tileRight and tileBottomRight) and (tileRight:collidable() or not tileBottomRight:collidable()) then 
+            self.snail.x = self.snail.x - SNAIL_MOVE_SPEED * dt 
 
             self.movingDirection = 'left'
             self.snail.direction = self.movingDirection
